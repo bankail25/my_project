@@ -1,0 +1,114 @@
+<%= form_for(@producto) do |f| %>
+  <% if @producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% @producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :keywords %><br>
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_title %><br>
+    <%= f.text_field :sub_title %>
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br>
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br>
+    <%= f.text_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :incluye %><br>
+    <%= f.text_field :incluye %>
+  </div>
+  <div class="field">
+    <%= f.label :colores %><br>
+    <%= f.text_field :colores %>
+  </div>
+  <div class="field">
+    <%= f.label :altura_min %><br>
+    <%= f.text_field :altura_min %>
+  </div>
+  <div class="field">
+    <%= f.label :altura_max %><br>
+    <%= f.text_field :altura_max %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :descuento %><br>
+    <%= f.text_field :descuento %>
+  </div>
+  <div class="field">
+    <%= f.label :vesa %><br>
+    <%= f.text_field :vesa %>
+  </div>
+  <div class="field">
+    <%= f.label :dimensiones %><br>
+    <%= f.text_field :dimensiones %>
+  </div>
+  <div class="field">
+    <%= f.label :distancia %><br>
+    <%= f.text_field :distancia %>
+  </div>
+  <div class="field">
+    <%= f.label :peso %><br>
+    <%= f.text_field :peso %>
+  </div>
+  <div class="field">
+    <%= f.label :angulo_in %><br>
+    <%= f.text_field :angulo_in %>
+  </div>
+  <div class="field">
+    <%= f.label :angulo_giro %><br>
+    <%= f.text_field :angulo_giro %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.file_field :cover%>
+  </div>
+  <div class="field">
+    <label>Categorias</label>
+    <% @categories.each do |category| %>
+      <div class = "field">
+        <%= check_box_tag "categories[]", category.id %> <%= category.name %>
+      </div>
+    <%end%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

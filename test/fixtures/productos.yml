@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  description: MyString
+  subject: MyString
+  title: MyString
+  sub_title: MyString
+  modelo: MyString
+  altura: MyString
+  incluye: MyString
+  colores: MyString
+  altura_min: MyString
+  altura_max: MyString
+  material: MyString
+  precio: 1.5
+  descuento: 1.5
+  vesa: MyString
+  dimensiones: MyString
+  distancia: MyString
+  peso: MyString
+  angulo_in: MyString
+  angulo_giro: MyString
+  color: MyString
+
+two:
+  keywords: MyString
+  description: MyString
+  subject: MyString
+  title: MyString
+  sub_title: MyString
+  modelo: MyString
+  altura: MyString
+  incluye: MyString
+  colores: MyString
+  altura_min: MyString
+  altura_max: MyString
+  material: MyString
+  precio: 1.5
+  descuento: 1.5
+  vesa: MyString
+  dimensiones: MyString
+  distancia: MyString
+  peso: MyString
+  angulo_in: MyString
+  angulo_giro: MyString
+  color: MyString

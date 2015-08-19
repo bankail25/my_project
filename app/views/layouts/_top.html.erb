@@ -1,0 +1,45 @@
+<header>
+	<div itemscope itemtype = "http://schema.org/LocalBusiness">
+		<h2 itemprop = "url"><%= link_to image_tag("logo/soportes-steel.png")%></h2>
+	</div>
+	<div class = "main color6">
+		<!-- START - MINIMAL CSS3 MENU -->
+		<label class="minimal-menu-button" for="mobile-nav">Menu</label>
+		<input class="minimal-menu-button" type="checkbox" id="mobile-nav" name="mobile-nav" />
+		<div class="minimal-menu clr-white">
+			<ul>
+				<li><%= link_to "Inicio", root_path %></li>
+				<li><a class = "d2" href="/Nosotros">Nosotros</a></li>
+				<li><a class = "d3" href="/Servicios">Servicios</a></li>
+				<li><%= link_to "Productos", productos_path %></li>
+				<li><a class = "d5" href="#">Promociones</a></li>
+				<li><a class = "d7" href="/Contacto">Contacto</a></li>
+				<li><a class = "d8" href="/Contacto">Fabricación</a></li>
+				<% if user_signed_in? %>
+				<li><%= link_to "Cerrar session", destroy_user_session_path, method: :delete%></li>
+				<%else%>
+					<li><%= link_to "Iniciar session", new_user_session_path %></li>
+					<li><%= link_to "Crear cuenta", new_user_registration_path %></li>
+				<%end%>
+			</ul>
+		</div>
+		<!-- END - MINIMAL CSS3 MENU -->
+	</div>
+</header>
+<div class = "h_menu color2">
+	<ul>
+		<li><a href="/categories/pedestales">Pedestales</a></li>
+		<li class = "level"><a href="/categories/soportes-para-pantallas">Soportes para pantallas</a>
+			<ul>
+				<li><a href = "/categories/soportes-a-escritorio">Soportes a escritorio</a></li>
+				<li><a href = "/categories/soportes-de-brazo">Soportes de brazo</a></li>
+				<li><a href = "/categories/soportes-fijos">Soportes fijos</a></li>
+			</ul>
+		</li>
+		<li><a href = "/categories/soportes-tablets">Soportes Tablets</a></li>
+	</ul>
+</div>
+	
+
+<p class = "notice"><%= notice %>
+<p class = "alert"><%= alert %>

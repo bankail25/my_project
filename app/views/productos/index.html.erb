@@ -1,0 +1,130 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Productos</h1>
+<% @productos.each do |producto| %>
+  <div class="container">
+    <div class="row">
+      <div class = "col-md-8">
+        <div class = "border2 container-fluid">
+          <div class = "col-md-4">
+            <div class = "images2 img-responsive img-thumbnail"><%= image_tag producto.cover.url() %></div>
+          </div>
+          <div class = "title4">
+            <h2 class="list-group-item-heading"><%= producto.title %></h2>
+          </div>
+          <div class = "description">
+                <ul class="list-unstyled">
+                  <li><b><%= producto.sub_title %></b></li>
+                  <li><%= producto.altura %></li>
+                  <li><%= producto.incluye %></li>
+                  <li><em><%= producto.colores %></em></li>
+                </ul>
+          </div>
+          <div class = "col-md-8">
+                <div class = "line3"></div>
+                  <div class = "price2"><strong><%= producto.precio %></strong>
+                    <del class = "promo" ></del>
+                  </div>
+                <div class = "line3"></div>
+          </div>
+          <div class = "description col-md-12">
+            <div class="bs-example" data-example-id="hoverable-table">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Color(es)</th>
+                    <th>Altura min.</th>
+                    <th>Altura max.</th>
+                    <th>Material</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Negro<br>*Blanco y Plata</td>
+                      <td><%= producto.altura_min %></td>
+                      <td><%= producto.altura_max %></td>
+                      <td><%= producto.material %></td>
+                   </tr>
+                 </tbody>
+              </table>
+            </div><!-- /example --> 
+          </div>
+          <% if user_signed_in? %>
+          <%= link_to 'Show', producto %>
+          <%= link_to 'Edit', edit_producto_path(producto) %>
+          <%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end%>
+<% if user_signed_in? %>
+<%= link_to 'New Producto', new_producto_path %>
+<%end%>
+<!--<h1>Listing Productos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Keywords</th>
+      <th>Description</th>
+      <th>Subject</th>
+      <th>Title</th>
+      <th>Sub title</th>
+      <th>Modelo</th>
+      <th>Altura</th>
+      <th>Incluye</th>
+      <th>Colores</th>
+      <th>Altura min</th>
+      <th>Altura max</th>
+      <th>Material</th>
+      <th>Precio</th>
+      <th>Descuento</th>
+      <th>Vesa</th>
+      <th>Dimensiones</th>
+      <th>Distancia</th>
+      <th>Peso</th>
+      <th>Angulo in</th>
+      <th>Angulo giro</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr>
+        <td><%= producto.keywords %></td>
+        <td><%= producto.description %></td>
+        <td><%= producto.subject %></td>
+        <td><%= producto.title %></td>
+        <td><%= producto.sub_title %></td>
+        <td><%= producto.modelo %></td>
+        <td><%= producto.altura %></td>
+        <td><%= producto.incluye %></td>
+        <td><%= producto.colores %></td>
+        <td><%= producto.altura_min %></td>
+        <td><%= producto.altura_max %></td>
+        <td><%= producto.material %></td>
+        <td><%= producto.precio %></td>
+        <td><%= producto.descuento %></td>
+        <td><%= producto.vesa %></td>
+        <td><%= producto.dimensiones %></td>
+        <td><%= producto.distancia %></td>
+        <td><%= producto.peso %></td>
+        <td><%= producto.angulo_in %></td>
+        <td><%= producto.angulo_giro %></td>
+        <td><%= producto.color %></td>
+        <td><%= producto.cover %></td>
+        <td><%= link_to 'Show', producto %></td>
+        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producto', new_producto_path %>
+-->
