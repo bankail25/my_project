@@ -50,6 +50,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  timeout:5000
   database: steel2_production
-  username: steel2
-  password: <%= ENV['STEEL2_DATABASE_PASSWORD'] %>
+ 

@@ -1,0 +1,27 @@
+Running `rake db:migrate =` attached to terminal... up, run.9380
+rake aborted!
+Gem::LoadError: Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.2.2/lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.2.2/lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.2.2/lib/active_record/connection_handling.rb:50:in `establish_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.2.2/lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/lazy_load_hooks.rb:28:in `block in on_load'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/lazy_load_hooks.rb:27:in `each'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/lazy_load_hooks.rb:27:in `on_load'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.2.2/lib/active_record/railtie.rb:116:in `block in <class:Railtie>'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/initializable.rb:30:in `instance_exec'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/initializable.rb:30:in `run'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/initializable.rb:55:in `block in run_initializers'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/initializable.rb:54:in `run_initializers'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/application.rb:352:in `initialize!'
+/app/config/environment.rb:5:in `<top (required)>'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `block in require'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:240:in `load_dependency'
+/app/vendor/bundle/ruby/2.0.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/application.rb:328:in `require_environment!'
+/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.2/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+Tasks: TOP => db:migrate => environment
+(See full trace by running task with --trace)
